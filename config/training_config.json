@@ -1,0 +1,41 @@
+{
+  "model": {
+    "objective": "multi:softprob",
+    "num_class": 3,
+    "max_depth": 7,
+    "learning_rate": 0.08,
+    "n_estimators": 300,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "reg_alpha": 0.1,
+    "reg_lambda": 0.2,
+    "random_state": 42,
+    "eval_metric": "mlogloss",
+    "verbosity": 0
+  },
+  "training": {
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "min_samples": 1500,
+    "max_features": 75
+  },
+  "data": {
+    "symbols": ["EURUSD=X", "GBPUSD=X", "USDJPY=X"],
+    "timeframes": ["1h", "4h"],
+    "period": "2y"
+  },
+  "features": {
+    "use_lit_signals": true,
+    "use_technical_indicators": true,
+    "use_interaction_features": true,
+    "lit_lookback": 50,
+    "feature_lookback": 50
+  },
+  "target": {
+    "method": "hybrid",
+    "future_periods": 5,
+    "threshold": 0.002,
+    "strong_threshold": 0.004,
+    "confidence_threshold": 0.7
+  }
+} 

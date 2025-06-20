@@ -1,0 +1,1 @@
+"""Módulo de utilidades del bot de trading.""" 

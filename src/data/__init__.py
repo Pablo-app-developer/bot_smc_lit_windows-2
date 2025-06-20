@@ -1,0 +1,1 @@
+"""Módulo de manejo de datos del bot de trading.""" 

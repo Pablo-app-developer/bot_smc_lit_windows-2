@@ -1,0 +1,35 @@
+# Configuración del Sistema de Trading LIT + ML
+
+# MetaTrader 5
+mt5:
+  login: 5036791117
+  password: "BtUvF-X8"
+  server: "MetaQuotes-Demo"
+
+# Gestión de Riesgos
+risk:
+  level: "moderate"  # conservative, moderate, aggressive
+  max_risk_per_trade: 0.02
+  max_daily_risk: 0.10
+  max_open_positions: 5
+  min_confidence: 0.65
+  max_spread: 3.0
+
+# Trading Bot
+bot:
+  symbols: ["EURUSD", "GBPUSD", "USDJPY", "AUDUSD"]
+  timeframe: "1h"
+  prediction_interval: 300  # segundos
+  trading_enabled: false  # cambiar a true para trading real
+
+# Modelo
+model:
+  path: "models/lit_ml_model.pkl"
+  retrain_interval: 24  # horas
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/trading.log"
+  max_size: "10MB"
+  backup_count: 5
